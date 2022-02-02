@@ -8,7 +8,7 @@
 
 * [Program.cs](./CS/AddCheckBoxField/Program.cs) (VB: [Program.vb](./VB/AddCheckBoxField/Program.vb))
 <!-- default file list end -->
-# How to add a check box field to a document
+# PDF Document API - Add a Check Box Field to a Document
 
 
 This example shows how to create a check box field and add it to a PDF document.
