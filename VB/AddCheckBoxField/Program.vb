@@ -1,4 +1,5 @@
 Imports DevExpress.Pdf
+Imports System.Diagnostics
 Imports System.Drawing
 
 Namespace AddCheckBoxField
@@ -16,6 +17,7 @@ Namespace AddCheckBoxField
                     processor.RenderNewPage(PdfPaperSize.Letter, graphics)
                 End Using
             End Using
+
             Process.Start(New ProcessStartInfo("..\..\..\Result.pdf") With {.UseShellExecute = True})
         End Sub
 
