@@ -7,8 +7,8 @@ Namespace AddCheckBoxField
 
         Shared Sub Main(ByVal args As String())
             Using processor As PdfDocumentProcessor = New PdfDocumentProcessor()
-                ' Create an empty document. 
-                processor.CreateEmptyDocument("..\..\Result.pdf")
+                ' Create an empty document.
+                processor.CreateEmptyDocument("..\..\..\Result.pdf")
                 ' Create graphics and draw a check box field.
                 Using graphics As PdfGraphics = processor.CreateGraphics()
                     DrawCheckBoxField(graphics)
@@ -16,6 +16,7 @@ Namespace AddCheckBoxField
                     processor.RenderNewPage(PdfPaperSize.Letter, graphics)
                 End Using
             End Using
+            Process.Start(New ProcessStartInfo("..\..\..\Result.pdf") With {.UseShellExecute = True})
         End Sub
 
         Private Shared Sub DrawCheckBoxField(ByVal graphics As PdfGraphics)

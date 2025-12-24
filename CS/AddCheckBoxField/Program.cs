@@ -1,4 +1,5 @@
 ﻿using DevExpress.Pdf;
+using System.Diagnostics;
 using System.Drawing;
 
 namespace AddCheckBoxField {
@@ -6,8 +7,8 @@ namespace AddCheckBoxField {
         static void Main(string[] args) {
             using (PdfDocumentProcessor processor = new PdfDocumentProcessor()) {
 
-                // Create an empty document. 
-                processor.CreateEmptyDocument("..\\..\\Result.pdf");
+                // Create an empty document.
+                processor.CreateEmptyDocument("..\\..\\..\\Result.pdf");
 
                 // Create graphics and draw a check box field.
                 using (PdfGraphics graphics = processor.CreateGraphics()) {
@@ -17,6 +18,7 @@ namespace AddCheckBoxField {
                     processor.RenderNewPage(PdfPaperSize.Letter, graphics);
                 }
             }
+                Process.Start(new ProcessStartInfo("..\\..\\..\\Result.pdf") { UseShellExecute = true });
         }
 
         static void DrawCheckBoxField(PdfGraphics graphics) {
